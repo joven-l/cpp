@@ -4,9 +4,9 @@
 #include <string>
 
 // default from subject pdf
-#define default_HP 10
-#define default_energy 10
-#define default_atk 0
+#define clap_default_HP 10
+#define clap_default_energy 10
+#define clap_default_atk 0
 
 class ClapTrap
 {

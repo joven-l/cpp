@@ -1,9 +1,9 @@
 #include "ClapTrap.hpp"
 #include <iostream>
 
-ClapTrap::ClapTrap(std::string name) : _name(name), _HP(default_HP), _energy(default_energy), _atk(default_atk)
+ClapTrap::ClapTrap(std::string name) : _name(name), _HP(clap_default_HP), _energy(clap_default_energy), _atk(clap_default_atk)
 {
-	std::cout << "Default Constructor called" << std::endl;
+	std::cout << "Default Constructor called (ClapTrap " << this->_name << ")" << std::endl;
 	return ;
 }
 
@@ -13,7 +13,7 @@ ClapTrap::ClapTrap(const ClapTrap &param)
 	this->_HP = param._HP;
 	this->_energy = param._energy;
 	this->_atk = param._atk;
-	std::cout << "Copy constructor called" << std::endl;
+	std::cout << "Copy constructor called (ClapTrap " << this->_name << ")" << std::endl;
 	return ;
 }
 
@@ -23,13 +23,13 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &param)
 	this->_HP = param._HP;
 	this->_energy = param._energy;
 	this->_atk = param._atk;
-	std::cout << "Copy assignment operator called" << std::endl;
+	std::cout << "Copy assignment operator called (ClapTrap " << this->_name << ")" << std::endl;
 	return (*this);
 }
 
 ClapTrap::~ClapTrap(void)
 {
-	std::cout << "Destructor called" << std::endl;
+	std::cout << "Destructor called (ClapTrap " << this->_name << ")" << std::endl;
 	return ;
 }
 
