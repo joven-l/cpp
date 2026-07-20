@@ -2,7 +2,7 @@ NAME = a.out
 # CC=g++
 # CFLAGS=-Wall -Wextra -Werror -g -std=c++98
 CC=c++
-CFLAGS=-Wall -Wextra -Werror -std=c++98
+CFLAGS=-Wall -Wextra -Werror -Wshadow -std=c++98
 SOURCES	= \
 ClapTrap.cpp \
 main.cpp
