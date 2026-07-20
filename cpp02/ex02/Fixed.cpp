@@ -2,6 +2,8 @@
 #include <iostream>
 #include <cmath>
 
+const int Fixed::_fracBits = 8;
+
 Fixed::Fixed(void) : _raw(0)
 {
 	std::cout << "constructor called" << std::endl;
@@ -93,7 +95,7 @@ bool Fixed::operator>=(const Fixed &param) const
 bool Fixed::operator<=(const Fixed &param) const
 {
 	// std::cout << "lesser than  or equal to operator called" << std::endl;
-	return (this->_raw < param._raw);
+	return (this->_raw <= param._raw);
 }
 
 bool Fixed::operator==(const Fixed &param) const
@@ -140,7 +142,7 @@ Fixed Fixed::operator/(const Fixed &param) const
 	// std::cout << "div operator called" << std::endl;
 	Fixed ret;
 
-	ret._raw = (this->_raw / param._raw) / (1 << this->_fracBits);
+	ret._raw = (this->_raw * (1 << this->_fracBits) / param._raw);
 	return (ret);
 }
 
@@ -178,6 +180,7 @@ Fixed Fixed::operator--(int)
 
 Fixed &Fixed::min(Fixed &s1, Fixed &s2)
 {
+	// std::cout << "min function called" << std::endl;
 	if (s1._raw < s2._raw)
 		return (s1);
 	return (s2);
@@ -185,6 +188,7 @@ Fixed &Fixed::min(Fixed &s1, Fixed &s2)
 
 const Fixed &Fixed::min(const Fixed &s1, const Fixed &s2)
 {
+	// std::cout << "const min function called" << std::endl;
 	if (s1._raw < s2._raw)
 		return (s1);
 	return (s2);
