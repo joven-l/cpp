@@ -28,6 +28,7 @@ int main( void )
 	c3.beRepaired(1);
 	c3.attack("[thing]");
 	c3.takeDamage(1000);
+	std::cout << std::endl;
 
 	ScavTrap s1("s1");
 	ScavTrap s2("s2");
