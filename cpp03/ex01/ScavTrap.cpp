@@ -92,5 +92,5 @@ void ScavTrap::beRepaired(unsigned int amount)
 
 void ScavTrap::guardGate()
 {
-	std::cout << this->_name << " is now in Gate keeper mode.";
+	std::cout << this->_name << " is now in Gate keeper mode." << std::endl;
 }
