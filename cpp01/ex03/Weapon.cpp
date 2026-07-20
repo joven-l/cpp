@@ -6,7 +6,7 @@
 /*   By: joloo <joloo@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/06 13:42:17 by joloo             #+#    #+#             */
-/*   Updated: 2026/07/20 13:12:10 by joloo            ###   ########.fr       */
+/*   Updated: 2026/07/20 15:51:49 by joloo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Weapon::Weapon(std::string type) : _type(type)
 {
-	// std::cout << "Default Constructor called" << std::endl;
+	// std::cout << "Constructor called" << std::endl;
 	return ;
 }
 

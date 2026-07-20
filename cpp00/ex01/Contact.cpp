@@ -6,7 +6,7 @@
 /*   By: joloo <joloo@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/03 14:09:14 by joloo             #+#    #+#             */
-/*   Updated: 2026/07/20 13:12:10 by joloo            ###   ########.fr       */
+/*   Updated: 2026/07/20 15:51:49 by joloo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Contact::Contact(void) : _is_set(0)
 {
-	// std::cout << "Default Constructor called" << std::endl;
+	// std::cout << "Constructor called" << std::endl;
 	return ;
 }
 

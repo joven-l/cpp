@@ -6,7 +6,7 @@
 /*   By: joloo <joloo@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/05 17:09:08 by joloo             #+#    #+#             */
-/*   Updated: 2026/07/20 13:11:52 by joloo            ###   ########.fr       */
+/*   Updated: 2026/07/20 15:51:49 by joloo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 Zombie::Zombie(void)
 {
-	// std::cout << "Default Constructor called" << std::endl;
+	// std::cout << "Constructor called" << std::endl;
 	return ;
 }
 

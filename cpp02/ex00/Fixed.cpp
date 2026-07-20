@@ -5,7 +5,7 @@ const int Fixed::_fracBits = 8;
 
 Fixed::Fixed(void) : _raw(0)
 {
-	std::cout << "Default Constructor called" << std::endl;
+	std::cout << "Constructor called" << std::endl;
 	return ;
 }
 

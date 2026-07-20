@@ -3,7 +3,7 @@
 
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name), _name(name), _HP(scav_default_HP), _energy(scav_default_energy), _atk(scav_default_atk)
 {
-	std::cout << "Default Constructor called (ScavTrap " << this->_name << ")" << std::endl;
+	std::cout << "Constructor called (ScavTrap " << this->_name << ")" << std::endl;
 	return ;
 }
 

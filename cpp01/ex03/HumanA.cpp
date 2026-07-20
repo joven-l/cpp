@@ -6,7 +6,7 @@
 /*   By: joloo <joloo@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/06 13:42:50 by joloo             #+#    #+#             */
-/*   Updated: 2026/07/20 13:12:10 by joloo            ###   ########.fr       */
+/*   Updated: 2026/07/20 15:51:49 by joloo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 HumanA::HumanA(std::string name, Weapon &Weapon) : _name(name), _Weapon(Weapon)
 {
-	// std::cout << "Default Constructor called" << std::endl;
+	// std::cout << "Constructor called" << std::endl;
 	return ;
 }
 
