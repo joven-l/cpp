@@ -5,6 +5,7 @@ int main( void )
 	ClapTrap c1("c1");
 	ClapTrap c2("c2");
 	ClapTrap c3(c1);
+	ClapTrap c4;
 	c3 = c1;
 
 	std::cout << std::endl;
@@ -33,6 +34,7 @@ int main( void )
 	ScavTrap s1("s1");
 	ScavTrap s2("s2");
 	ScavTrap s3(s1);
+	ScavTrap s4;
 	s3 = s2;
 
 	std::cout << std::endl;
