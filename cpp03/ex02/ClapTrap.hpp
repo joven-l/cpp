@@ -17,6 +17,7 @@ private:
 	unsigned int _atk;
 
 public:
+	ClapTrap(void);
 	ClapTrap(std::string name);
 	ClapTrap(const ClapTrap &param);
 	ClapTrap &operator=(const ClapTrap &param);

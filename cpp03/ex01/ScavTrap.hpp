@@ -19,6 +19,7 @@ private:
 	unsigned int _atk;
 
 public:
+	ScavTrap(void);
 	ScavTrap(std::string name);
 	ScavTrap(const ScavTrap &param);
 	ScavTrap &operator=(const ScavTrap &param);

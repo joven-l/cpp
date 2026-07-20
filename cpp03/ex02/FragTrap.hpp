@@ -19,6 +19,7 @@ private:
 	unsigned int _atk;
 
 public:
+	FragTrap(void);
 	FragTrap(std::string name);
 	FragTrap(const FragTrap &param);
 	FragTrap &operator=(const FragTrap &param);

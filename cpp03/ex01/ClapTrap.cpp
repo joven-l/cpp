@@ -1,9 +1,15 @@
 #include "ClapTrap.hpp"
 #include <iostream>
 
+ClapTrap::ClapTrap(void) : _name(""), _HP(clap_default_HP), _energy(clap_default_energy), _atk(clap_default_atk)
+{
+	std::cout << "Default constructor called (ClapTrap " << this->_name << ")" << std::endl;
+	return ;
+}
+
 ClapTrap::ClapTrap(std::string name) : _name(name), _HP(clap_default_HP), _energy(clap_default_energy), _atk(clap_default_atk)
 {
-	std::cout << "Constructor called (ClapTrap " << this->_name << ")" << std::endl;
+	std::cout << "Name constructor called (ClapTrap " << this->_name << ")" << std::endl;
 	return ;
 }
 
