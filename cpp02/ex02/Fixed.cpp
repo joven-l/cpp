@@ -6,13 +6,13 @@ const int Fixed::_fracBits = 8;
 
 Fixed::Fixed(void) : _raw(0)
 {
-	std::cout << "constructor called" << std::endl;
+	std::cout << "Default Constructor called" << std::endl;
 	return ;
 }
 
 Fixed::Fixed(const int param)
 {
-	std::cout << "int constructor called" << std::endl;
+	std::cout << "Int constructor called" << std::endl;
 	this->_raw = param << this->_fracBits;
 	return ;
 }
@@ -20,28 +20,28 @@ Fixed::Fixed(const int param)
 // roundf rounds to the nearest whole number
 Fixed::Fixed(const float param)
 {
-	std::cout << "float constructor called" << std::endl;
+	std::cout << "Float constructor called" << std::endl;
 	this->_raw = roundf(param * (1 << this->_fracBits));
 	return ;
 }
 
 Fixed::Fixed(const Fixed &param)
 {
-	std::cout << "copy constructor called" << std::endl;
+	std::cout << "Copy constructor called" << std::endl;
 	this->_raw = param._raw;
 	return ;
 }
 
 Fixed &Fixed::operator=(const Fixed &param)
 {
-	std::cout << "copy assignment operator called" << std::endl;
+	std::cout << "Copy assignment operator called" << std::endl;
 	this->_raw = param._raw;
 	return (*this);
 }
 
 Fixed::~Fixed(void)
 {
-	std::cout << "destructor called" << std::endl;
+	std::cout << "Destructor called" << std::endl;
 	return ;
 }
 

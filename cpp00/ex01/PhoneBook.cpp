@@ -6,7 +6,7 @@
 /*   By: joloo <joloo@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/02 14:50:39 by joloo             #+#    #+#             */
-/*   Updated: 2026/04/03 17:35:52 by joloo            ###   ########.fr       */
+/*   Updated: 2026/07/20 13:12:10 by joloo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,13 @@
 // constructor/destructor no return types
 PhoneBook::PhoneBook(void) : _Contacts_i(0)
 {
-	// std::cout << "constructor called" << std::endl;
+	// std::cout << "Default Constructor called" << std::endl;
 	return ;
 }
 
 PhoneBook::~PhoneBook(void)
 {
-	// std::cout << "destructor called" << std::endl;
+	// std::cout << "Destructor called" << std::endl;
 	return ;
 }
 

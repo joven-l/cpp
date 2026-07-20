@@ -6,7 +6,7 @@
 /*   By: joloo <joloo@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/06 16:32:16 by joloo             #+#    #+#             */
-/*   Updated: 2026/04/06 17:22:30 by joloo            ###   ########.fr       */
+/*   Updated: 2026/07/20 13:12:10 by joloo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,13 @@
 
 Harl::Harl(void)
 {
-	// std::cout << "constructor called" << std::endl;
+	// std::cout << "Default Constructor called" << std::endl;
 	return ;
 }
 
 Harl::~Harl(void)
 {
-	// std::cout << "destructor called" << std::endl;
+	// std::cout << "Destructor called" << std::endl;
 	return ;
 }
 

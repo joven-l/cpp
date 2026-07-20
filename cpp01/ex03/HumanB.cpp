@@ -6,7 +6,7 @@
 /*   By: joloo <joloo@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/06 13:42:48 by joloo             #+#    #+#             */
-/*   Updated: 2026/04/06 14:32:48 by joloo            ###   ########.fr       */
+/*   Updated: 2026/07/20 13:12:10 by joloo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,13 @@
 
 HumanB::HumanB(std::string name): _name(name)
 {
-	// std::cout << "constructor called" << std::endl;
+	// std::cout << "Default Constructor called" << std::endl;
 	return ;
 }
 
 HumanB::~HumanB(void)
 {
-	// std::cout << "destructor called" << std::endl;
+	// std::cout << "Destructor called" << std::endl;
 	return ;
 }
 

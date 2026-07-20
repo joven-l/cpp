@@ -5,27 +5,27 @@ const int Fixed::_fracBits = 8;
 
 Fixed::Fixed(void) : _raw(0)
 {
-	std::cout << "constructor called" << std::endl;
+	std::cout << "Default Constructor called" << std::endl;
 	return ;
 }
 
 Fixed::Fixed(const Fixed &param)
 {
-	std::cout << "copy constructor called" << std::endl;
+	std::cout << "Copy constructor called" << std::endl;
 	this->_raw = param._raw;
 	return ;
 }
 
 Fixed &Fixed::operator=(const Fixed &param)
 {
-	std::cout << "copy assignment operator called" << std::endl;
+	std::cout << "Copy assignment operator called" << std::endl;
 	this->_raw = param._raw;
 	return (*this);
 }
 
 Fixed::~Fixed(void)
 {
-	std::cout << "destructor called" << std::endl;
+	std::cout << "Destructor called" << std::endl;
 	return ;
 }
 
