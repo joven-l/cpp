@@ -9,21 +9,21 @@ ClapTrap::ClapTrap(std::string name) : _name(name), _HP(default_HP), _energy(def
 
 ClapTrap::ClapTrap(const ClapTrap &param)
 {
-	std::cout << "Copy constructor called" << std::endl;
 	this->_name = param._name;
 	this->_HP = param._HP;
 	this->_energy = param._energy;
 	this->_atk = param._atk;
+	std::cout << "Copy constructor called" << std::endl;
 	return ;
 }
 
 ClapTrap &ClapTrap::operator=(const ClapTrap &param)
 {
-	std::cout << "Copy assignment operator called" << std::endl;
 	this->_name = param._name;
 	this->_HP = param._HP;
 	this->_energy = param._energy;
 	this->_atk = param._atk;
+	std::cout << "Copy assignment operator called" << std::endl;
 	return (*this);
 }
 
