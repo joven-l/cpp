@@ -55,4 +55,8 @@ int main( void )
 	s3.beRepaired(1);
 	s3.attack("[thing]");
 	s3.takeDamage(1000);
+	std::cout << std::endl;
+	s1.guardGate();
+	s2.guardGate();
+	s3.guardGate();
 }
