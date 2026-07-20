@@ -52,7 +52,7 @@ int main( void )
 	s2.attack("[thing]");
 	s2.takeDamage(1000);
 	std::cout << std::endl;
-	c3.beRepaired(1);
-	c3.attack("[thing]");
-	c3.takeDamage(1000);
+	s3.beRepaired(1);
+	s3.attack("[thing]");
+	s3.takeDamage(1000);
 }
