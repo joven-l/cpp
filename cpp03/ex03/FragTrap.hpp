@@ -10,9 +10,9 @@
 #define frag_default_energy 100
 #define frag_default_atk 30
 
-class FragTrap : public ClapTrap
+class FragTrap : virtual public ClapTrap
 {
-private:
+protected:
 	std::string _name;
 	unsigned int _HP;
 	unsigned int _energy;

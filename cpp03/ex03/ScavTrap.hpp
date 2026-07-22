@@ -10,9 +10,9 @@
 #define scav_default_energy 50
 #define scav_default_atk 20
 
-class ScavTrap : public ClapTrap
+class ScavTrap : virtual public ClapTrap
 {
-private:
+protected:
 	std::string _name;
 	unsigned int _HP;
 	unsigned int _energy;
