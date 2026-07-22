@@ -1,5 +1,4 @@
-#include "ScavTrap.hpp"
-#include "FragTrap.hpp"
+#include "DiamondTrap.hpp"
 #include <iostream>
 int main( void ) 
 {
@@ -96,4 +95,40 @@ int main( void )
 	f1.highFivesGuys();
 	f2.highFivesGuys();
 	f3.highFivesGuys();
+
+	// #define frag_default_HP 100
+	// #define scav_default_energy 50
+	// #define frag_default_atk 30
+	DiamondTrap d1("d1");
+	DiamondTrap d2("d2");
+	DiamondTrap d3(d1);
+	DiamondTrap d4;
+	d3 = d2;
+
+	std::cout << std::endl;
+	d1.attack("[thing]");
+	d1.takeDamage(99);
+	for (int i = 0; i < 99; i++)
+		d1.beRepaired(1);
+	std::cout << std::endl;
+	d1.beRepaired(1);
+	d1.attack("[thing]");
+	d1.takeDamage(1000);
+	std::cout << std::endl;
+	d1.beRepaired(1);
+	d1.attack("[thing]");
+	d1.takeDamage(1000);
+	std::cout << std::endl;
+	d2.beRepaired(1);
+	d2.attack("[thing]");
+	d2.takeDamage(1000);
+	std::cout << std::endl;
+	d3.beRepaired(1);
+	d3.attack("[thing]");
+	d3.takeDamage(1000);
+	std::cout << std::endl;
+	d1.whoAmI();
+	d2.whoAmI();
+	d3.whoAmI();
+	d4.whoAmI();
 }
