@@ -1,16 +1,21 @@
 #include "DiamondTrap.hpp"
 #include <iostream>
 
-DiamondTrap::DiamondTrap(void) : FragTrap(""), ScavTrap("");
+DiamondTrap::DiamondTrap(void) : FragTrap(""), ScavTrap("")
 {
-	ClapTrap::_name = "" + "_clap_name";
+	this->ClapTrap::_name = "_clap_name";
+	this->_name = "";
+	this->_HP = FragTrap::_HP;
+	this->_energy = ScavTrap::_energy;
+	this->_atk = FragTrap::_atk;
 	std::cout << "Default constructor called (DiamondTrap " << this->_name << ")" << std::endl;
 	return ;
 }
 
-DiamondTrap::DiamondTrap(std::string name) : FragTrap(name), ScavTrap(name);
+DiamondTrap::DiamondTrap(std::string name) : FragTrap(name), ScavTrap(name)
 {
-	ClapTrap::_name = name + "_clap_name";
+	this->ClapTrap::_name = name + "_clap_name";
+	this->_name = name;
 	this->_HP = FragTrap::_HP;
 	this->_energy = ScavTrap::_energy;
 	this->_atk = FragTrap::_atk;
@@ -47,19 +52,7 @@ DiamondTrap::~DiamondTrap(void)
 
 void DiamondTrap::attack(const std::string& target)
 {
-	if (this->_HP == 0)
-	{
-		std::cout << "DiamondTrap " << this->_name << " has no HP and cannot attack" << std::endl;
-		return ;
-	}
-	if (this->_energy == 0)
-	{
-		std::cout << "DiamondTrap " << this->_name << " has no energy and cannot attack" << std::endl;
-		return ;
-	}
-	this->_energy--;
-	std::cout << "DiamondTrap " << this->_name << " attacks " << target << " for " << this->_atk << " HP"
-	<< ". Remaining energy: " << this->_energy << std::endl;
+	this->ScavTrap::attack(target);
 	return ;
 }
 
@@ -103,6 +96,6 @@ void DiamondTrap::beRepaired(unsigned int amount)
 
 void DiamondTrap::whoAmI()
 {
-	std::cout << "DiamondTrap name: " << this->_name << ", ClapTrap name: " << ClapTrap->_name << std::endl
+	std::cout << "DiamondTrap name: " << this->_name << ", ClapTrap name: " << ClapTrap::_name << std::endl;
 	return ;
 }
