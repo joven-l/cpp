@@ -6,13 +6,10 @@
 
 #include <string>
 
-class DiamondTrap : public FragTrap, public ScavTrap
+class DiamondTrap : public ScavTrap, public FragTrap
 {
 private:
 	std::string _name;
-	unsigned int _HP;
-	unsigned int _energy;
-	unsigned int _atk;
 
 public:
 	DiamondTrap(void);
@@ -20,10 +17,6 @@ public:
 	DiamondTrap(const DiamondTrap &param);
 	DiamondTrap &operator=(const DiamondTrap &param);
 	~DiamondTrap(void);
-
-	void attack(const std::string& target);
-	void takeDamage(unsigned int amount);
-	void beRepaired(unsigned int amount);
 
 	void whoAmI();
 };

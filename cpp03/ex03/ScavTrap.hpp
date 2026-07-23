@@ -12,12 +12,6 @@
 
 class ScavTrap : virtual public ClapTrap
 {
-protected:
-	std::string _name;
-	unsigned int _HP;
-	unsigned int _energy;
-	unsigned int _atk;
-
 public:
 	ScavTrap(void);
 	ScavTrap(std::string name);
@@ -26,8 +20,6 @@ public:
 	~ScavTrap(void);
 
 	void attack(const std::string& target);
-	void takeDamage(unsigned int amount);
-	void beRepaired(unsigned int amount);
 
 	void guardGate();
 };

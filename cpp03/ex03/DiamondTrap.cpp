@@ -1,24 +1,24 @@
 #include "DiamondTrap.hpp"
 #include <iostream>
 
-DiamondTrap::DiamondTrap(void) : FragTrap("Default"), ScavTrap("Default")
+DiamondTrap::DiamondTrap(void) : ScavTrap("Default"), FragTrap("Default")
 {
-	this->ClapTrap::_name = "_clap_name";
-	this->_name = "";
-	this->_HP = FragTrap::_HP;
-	this->_energy = ScavTrap::_energy;
-	this->_atk = FragTrap::_atk;
+	this->ClapTrap::_name = "Default_clap_name";
+	this->_name = "Default";
+	this->_HP = frag_default_HP;
+	this->_energy = scav_default_energy;
+	this->_atk = frag_default_atk;
 	std::cout << "Default constructor called (DiamondTrap " << this->_name << ")" << std::endl;
 	return ;
 }
 
-DiamondTrap::DiamondTrap(std::string name) : FragTrap(name), ScavTrap(name)
+DiamondTrap::DiamondTrap(std::string name) : ScavTrap(name), FragTrap(name)
 {
 	this->ClapTrap::_name = name + "_clap_name";
 	this->_name = name;
-	this->_HP = FragTrap::_HP;
-	this->_energy = ScavTrap::_energy;
-	this->_atk = FragTrap::_atk;
+	this->_HP = frag_default_HP;
+	this->_energy = scav_default_energy;
+	this->_atk = frag_default_atk;
 	std::cout << "Name constructor called (DiamondTrap " << this->_name << ")" << std::endl;
 	return ;
 }
@@ -47,50 +47,6 @@ DiamondTrap &DiamondTrap::operator=(const DiamondTrap &param)
 DiamondTrap::~DiamondTrap(void)
 {
 	std::cout << "Destructor called (DiamondTrap " << this->_name << ")" << std::endl;
-	return ;
-}
-
-void DiamondTrap::attack(const std::string& target)
-{
-	this->ScavTrap::attack(target);
-	return ;
-}
-
-void DiamondTrap::takeDamage(unsigned int amount)
-{
-	if (this->_HP == 0)
-	{
-		std::cout << "DiamondTrap " << this->_name << " already has 0 HP" << std::endl;
-		return ;
-	}
-	if (amount >= this->_HP)
-	{
-		std::cout << "DiamondTrap " << this->_name << " takes " << this->_HP << " damage and dies" << std::endl;
-		this->_HP -= this->_HP;
-		return ;
-	}
-	this->_HP -= amount;
-	std::cout << "DiamondTrap " << this->_name << " takes damage and loses " << amount << " HP"
-	<< ". Remaining HP: " << this->_HP << ". Remaining energy: " << this->_energy << std::endl;
-	return ;
-}
-
-void DiamondTrap::beRepaired(unsigned int amount)
-{
-	if (this->_HP == 0)
-	{
-		std::cout << "DiamondTrap " << this->_name << " has no HP and cannot heal" << std::endl;
-		return ;
-	}
-	if (this->_energy == 0)
-	{
-		std::cout << "DiamondTrap " << this->_name << " has no energy and cannot heal" << std::endl;
-		return ;
-	}
-	this->_HP += amount;
-	this->_energy--;
-	std::cout << "DiamondTrap " << this->_name << " is repaired for " << amount << " HP"
-	<< ". Remaining HP: " << this->_HP << ". Remaining energy: " << this->_energy << std::endl;
 	return ;
 }
 
