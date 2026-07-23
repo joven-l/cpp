@@ -1,7 +1,7 @@
 #include "FragTrap.hpp"
 #include <iostream>
 
-FragTrap::FragTrap(void) : ClapTrap(""), _name(""), _HP(frag_default_HP), _energy(frag_default_energy), _atk(frag_default_atk)
+FragTrap::FragTrap(void) : ClapTrap("Default"), _name("Default"), _HP(frag_default_HP), _energy(frag_default_energy), _atk(frag_default_atk)
 {
 	std::cout << "Default Constructor called (FragTrap " << this->_name << ")" << std::endl;
 	return ;

@@ -1,7 +1,7 @@
 #include "DiamondTrap.hpp"
 #include <iostream>
 
-DiamondTrap::DiamondTrap(void) : FragTrap(""), ScavTrap("")
+DiamondTrap::DiamondTrap(void) : FragTrap("Default"), ScavTrap("Default")
 {
 	this->ClapTrap::_name = "_clap_name";
 	this->_name = "";

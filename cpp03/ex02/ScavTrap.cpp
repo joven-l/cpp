@@ -1,7 +1,7 @@
 #include "ScavTrap.hpp"
 #include <iostream>
 
-ScavTrap::ScavTrap(void) : ClapTrap(""), _name(""), _HP(scav_default_HP), _energy(scav_default_energy), _atk(scav_default_atk)
+ScavTrap::ScavTrap(void) : ClapTrap("Default"), _name("Default"), _HP(scav_default_HP), _energy(scav_default_energy), _atk(scav_default_atk)
 {
 	std::cout << "Default Constructor called (ScavTrap " << this->_name << ")" << std::endl;
 	return ;
