@@ -58,6 +58,10 @@ int main( void )
 	std::cout << std::endl;
 	s3.beRepaired(1);
 	s3.attack("[thing]");
+	s3.takeDamage(1);
+	s3 = s2;
+	s3.beRepaired(1);
+	s3.attack("[thing]");
 	s3.takeDamage(1000);
 	std::cout << std::endl;
 	s1.guardGate();
@@ -89,6 +93,10 @@ int main( void )
 	f2.attack("[thing]");
 	f2.takeDamage(1000);
 	std::cout << std::endl;
+	f3.beRepaired(1);
+	f3.attack("[thing]");
+	f3.takeDamage(1);
+	f3 = f2;
 	f3.beRepaired(1);
 	f3.attack("[thing]");
 	f3.takeDamage(1000);

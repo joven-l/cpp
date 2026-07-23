@@ -57,6 +57,10 @@ int main( void )
 	std::cout << std::endl;
 	s3.beRepaired(1);
 	s3.attack("[thing]");
+	s3.takeDamage(1);
+	s3 = s2;
+	s3.beRepaired(1);
+	s3.attack("[thing]");
 	s3.takeDamage(1000);
 	std::cout << std::endl;
 	s1.guardGate();
@@ -90,11 +94,16 @@ int main( void )
 	std::cout << std::endl;
 	f3.beRepaired(1);
 	f3.attack("[thing]");
+	f3.takeDamage(1);
+	f3 = f2;
+	f3.beRepaired(1);
+	f3.attack("[thing]");
 	f3.takeDamage(1000);
 	std::cout << std::endl;
 	f1.highFivesGuys();
 	f2.highFivesGuys();
 	f3.highFivesGuys();
+	std::cout << std::endl;
 
 	// #define frag_default_HP 100
 	// #define scav_default_energy 50
@@ -107,8 +116,8 @@ int main( void )
 
 	std::cout << std::endl;
 	d1.attack("[thing]");
-	d1.takeDamage(99);
-	for (int i = 0; i < 99; i++)
+	d1.takeDamage(49);
+	for (int i = 0; i < 49; i++)
 		d1.beRepaired(1);
 	std::cout << std::endl;
 	d1.beRepaired(1);
@@ -123,6 +132,10 @@ int main( void )
 	d2.attack("[thing]");
 	d2.takeDamage(1000);
 	std::cout << std::endl;
+	d3.beRepaired(1);
+	d3.attack("[thing]");
+	d3.takeDamage(1);
+	d3 = d2;
 	d3.beRepaired(1);
 	d3.attack("[thing]");
 	d3.takeDamage(1000);

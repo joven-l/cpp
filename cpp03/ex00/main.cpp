@@ -6,7 +6,7 @@ int main( void )
 	ClapTrap c2("c2");
 	ClapTrap c3(c1);
 	ClapTrap c4;
-	c3 = c1;
+	c3 = c2;
 
 	std::cout << std::endl;
 	c1.attack("[thing]");
@@ -28,5 +28,10 @@ int main( void )
 	std::cout << std::endl;
 	c3.beRepaired(1);
 	c3.attack("[thing]");
+	c3.takeDamage(1);
+	c3 = c2;
+	c3.beRepaired(1);
+	c3.attack("[thing]");
 	c3.takeDamage(1000);
+	std::cout << std::endl;
 }

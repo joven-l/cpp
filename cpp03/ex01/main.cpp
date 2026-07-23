@@ -57,6 +57,10 @@ int main( void )
 	std::cout << std::endl;
 	s3.beRepaired(1);
 	s3.attack("[thing]");
+	s3.takeDamage(1);
+	s3 = s2;
+	s3.beRepaired(1);
+	s3.attack("[thing]");
 	s3.takeDamage(1000);
 	std::cout << std::endl;
 	s1.guardGate();
