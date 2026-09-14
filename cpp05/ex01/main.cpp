@@ -4,7 +4,6 @@
 
 int main()
 {
-	// signForm tests
 	try
 	{
 		Bureaucrat A("A", 1);
