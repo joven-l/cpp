@@ -74,7 +74,10 @@ void Form::beSigned(Bureaucrat &param)
 }
 std::ostream &operator<<(std::ostream& os, const Form &param)
 {
-	(void) param;
+	std::cout << param.getName() << ". Is signed: " << param.get_is_signed()
+		<< ". Required grade to sign: "
+		<< param.get_grade_to_sign() << ". Required grade to execute: "
+		<< param.get_grade_to_exec() << "." << std::endl;
 	return (os);
 }
 

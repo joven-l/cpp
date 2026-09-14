@@ -14,6 +14,8 @@ int main()
 
 		Bureaucrat B("B", 2);
 		B.signForm(FormA);
+
+		std::cout << FormA;
 	}
 	catch (std::exception & e)
 	{
