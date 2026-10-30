@@ -4,12 +4,11 @@ NAME = a.out
 CC=c++
 CFLAGS=-Wall -Wextra -Werror -std=c++98
 SOURCES	= \
-RobotomyRequestForm.cpp \
-PresidentialPardonForm.cpp \
-AForm.cpp \
+convert_types.cpp \
 main.cpp \
-Bureaucrat.cpp \
-ShrubberyCreationForm.cpp
+handle_literals.cpp \
+ScalarConverter.cpp \
+find_type.cpp
 all: $(NAME)
 
 OBJECTS = $(SOURCES:.cpp=.o)
