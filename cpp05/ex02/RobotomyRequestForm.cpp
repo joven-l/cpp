@@ -39,6 +39,7 @@ RobotomyRequestForm::~RobotomyRequestForm(void)
 
 void RobotomyRequestForm::executeAction(void) const
 {
+	srand(time(NULL));
 	std::cout << "*DRILLING NOISE*" << std::endl;
 	if (rand() % 2)
 	{

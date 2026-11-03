@@ -28,7 +28,6 @@ int main()
 	std::cout << std::endl;
 	try
 	{
-		srand(time(NULL));
 		Bureaucrat A("A", 3);
 		RobotomyRequestForm RobotomyFormA("RobotomyFormA");
 
@@ -75,7 +74,6 @@ int main()
 	std::cout << std::endl;
 	try
 	{
-		srand(time(NULL));
 		Bureaucrat A("A", 71);
 		RobotomyRequestForm RobotomyFormA("RobotomyFormA");
 
