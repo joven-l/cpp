@@ -24,7 +24,7 @@ public:
 	AForm(std::string name, int grade_to_sign, int grade_to_exec);
 	AForm(const AForm &param);
 	AForm &operator=(const AForm &param);
-	~AForm(void);
+	virtual ~AForm(void);
 
 	std::string getName(void) const;;
 	bool get_is_signed(void) const;
