@@ -14,8 +14,8 @@ class AForm
 private:
 	const std::string	_name;
 	bool				_is_signed;
-	int					_grade_to_sign;
-	int					_grade_to_exec;
+	const int			_grade_to_sign;
+	const int			_grade_to_exec;
 	static void checkGrade(int grade);
 	virtual void executeAction(void) const = 0;
 

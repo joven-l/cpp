@@ -2,31 +2,25 @@
 #include "Bureaucrat.hpp"
 #include <iostream>
 
-Form::Form(void) : _name("Default Name")
+Form::Form(void) : _name("Default Name"), _grade_to_sign(1), _grade_to_exec(1)
 {
 	std::cout << "Form Default Constructor called" << std::endl;
 	this->_is_signed = 0;
-	this->_grade_to_sign = 1;
-	this->_grade_to_exec = 1;
 	return ;
 }
 
-Form::Form(std::string name, int grade_to_sign, int grade_to_exec) : _name(name)
+Form::Form(std::string name, int grade_to_sign, int grade_to_exec) : _name(name), _grade_to_sign(grade_to_sign), _grade_to_exec(grade_to_exec)
 {
 	std::cout << "Form Constructor called" << std::endl;
 	checkGrade(grade_to_sign);
 	checkGrade(grade_to_exec);
 	this->_is_signed = 0;
-	this->_grade_to_sign = grade_to_sign;
-	this->_grade_to_exec = grade_to_exec;
 	return ;
 }
 
-Form::Form(const Form &param) : _name(param._name)
+Form::Form(const Form &param) : _name(param._name), _grade_to_sign(param._grade_to_sign), _grade_to_exec(param._grade_to_exec)
 {
 	this->_is_signed = param._is_signed;
-	this->_grade_to_sign = param._grade_to_sign;
-	this->_grade_to_exec = param._grade_to_exec;
 	std::cout << "Form Copy Constructor called" << std::endl;
 	return ;
 }
@@ -34,8 +28,6 @@ Form::Form(const Form &param) : _name(param._name)
 Form &Form::operator=(const Form &param)
 {
 	this->_is_signed = param._is_signed;
-	this->_grade_to_sign = param._grade_to_sign;
-	this->_grade_to_exec = param._grade_to_exec;
 	std::cout << "Form Copy assignment operator called called" << std::endl;
 	return (*this);
 }

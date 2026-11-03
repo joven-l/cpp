@@ -2,31 +2,25 @@
 #include "Bureaucrat.hpp"
 #include <iostream>
 
-AForm::AForm(void) : _name("Default Name")
+AForm::AForm(void) : _name("Default Name"), _grade_to_sign(1), _grade_to_exec(1)
 {
 	std::cout << "AForm Default Constructor called" << std::endl;
 	this->_is_signed = 0;
-	this->_grade_to_sign = 1;
-	this->_grade_to_exec = 1;
 	return ;
 }
 
-AForm::AForm(std::string name, int grade_to_sign, int grade_to_exec) : _name(name)
+AForm::AForm(std::string name, int grade_to_sign, int grade_to_exec) : _name(name), _grade_to_sign(grade_to_sign), _grade_to_exec(grade_to_exec)
 {
 	std::cout << "AForm Constructor called" << std::endl;
 	checkGrade(grade_to_sign);
 	checkGrade(grade_to_exec);
 	this->_is_signed = 0;
-	this->_grade_to_sign = grade_to_sign;
-	this->_grade_to_exec = grade_to_exec;
 	return ;
 }
 
-AForm::AForm(const AForm &param) : _name(param._name)
+AForm::AForm(const AForm &param) : _name(param._name), _grade_to_sign(param._grade_to_sign), _grade_to_exec(param._grade_to_exec)
 {
 	this->_is_signed = param._is_signed;
-	this->_grade_to_sign = param._grade_to_sign;
-	this->_grade_to_exec = param._grade_to_exec;
 	std::cout << "AForm Copy Constructor called" << std::endl;
 	return ;
 }
@@ -34,8 +28,6 @@ AForm::AForm(const AForm &param) : _name(param._name)
 AForm &AForm::operator=(const AForm &param)
 {
 	this->_is_signed = param._is_signed;
-	this->_grade_to_sign = param._grade_to_sign;
-	this->_grade_to_exec = param._grade_to_exec;
 	std::cout << "AForm Copy assignment operator called called" << std::endl;
 	return (*this);
 }
@@ -112,5 +104,5 @@ const char* AForm::GradeTooHighException::what() const throw()
 
 const char* AForm::FormNotSignedException::what() const throw()
 {
-	return ("Form not signed.");
+	return ("AForm not signed.");
 }
