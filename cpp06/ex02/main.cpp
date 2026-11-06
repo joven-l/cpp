@@ -40,7 +40,8 @@ void identify(Base& p)
 	std::cout << "reference is type: ";
 	try
 	{
-		dynamic_cast<A &>(p);
+		static_cast<void>(dynamic_cast<A &>(p));
+
 		std::cout << "A";
 	}
 	catch(...)
@@ -48,7 +49,7 @@ void identify(Base& p)
 	}
 	try
 	{
-		dynamic_cast<B &>(p);
+		static_cast<void>(dynamic_cast<B &>(p));
 		std::cout << "B";
 	}
 	catch(...)
@@ -56,7 +57,7 @@ void identify(Base& p)
 	}
 	try
 	{
-		dynamic_cast<C &>(p);
+		static_cast<void>(dynamic_cast<C &>(p));
 		std::cout << "C";
 	}
 	catch(...)
