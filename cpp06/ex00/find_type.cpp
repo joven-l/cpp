@@ -2,6 +2,8 @@
 
 Type find_type(const std::string &param)
 {
+	if (param.length() == 1 && std::isdigit(param[0]) != 0)
+		return (INT);
 	if (param.length() == 1 && std::isprint(param[0]) != 0)
 		return (CHAR);
 
