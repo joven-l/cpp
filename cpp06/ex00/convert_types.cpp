@@ -39,7 +39,7 @@ void convert_float(const std::string &param)
 	else
 		std::cout << "char: '" << static_cast<char>(converted) << "'" << std::endl;
 
-	if (converted > INT_MAX || converted < INT_MIN)
+	if (converted > static_cast<float>(INT_MAX) || converted < static_cast<float>(INT_MIN))
 		std::cout << "int: impossible" << std::endl;
 	else
 		std::cout << "int: " << static_cast<int>(converted) << std::endl;
